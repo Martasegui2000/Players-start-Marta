@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8">
+    <title>Players</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto|Titillium+Web&display=swap" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+  </head>
+  <body>
+    <header>
+			<h1 class="title-page">Padelmania</h1>
+      <h1>
+				<span style="font-size: 48px; color: Dodgerblue;">
+			  	<i class="far fa-address-book"></i>
+				</span>
+				Registre de jugadors
+			</h1>
+    </header>
+    <main>
+      <h2><i class="far fa-newspaper"></i> <span class="title">Nou jugador</span></h2>
+      <fieldset>
+        <legend>Dades personals</legend>
+        <form id="frmPlayer" class="" action="index.html" method="post" autocomplete="on">
+          <p class="camp">
+						<i class="far fa-address-card"></i>
+            <label>DNI:</label>
+            <input type="text" name="dni" value="" maxlength="10" required="required" title="DNI obligatori"/>
+          </p>
+          <p class="camp">
+						<i class="far fa-user"></i>
+            <label>Nom:</label>
+            <input type="text" name="name" value="" maxlength="20" required="required"/>
+          </p>
+          <p class="camp">
+						<i class="far fa-user"></i>
+            <label>Llinatges:</label>
+            <input type="text" name="surname" value="" maxlength="30" required="required"/>
+          </p>
+          <p class="camp">
+						<i class="fas fa-calendar-week"></i>
+            <label>Data naixement:</label>
+            <!--<input type="text" name="date" value=""  max="1989-12-31"/>-->
+            <input type="text" name="date" value="" required="required" />
+          </p>
+          <p class="camp" style="clear:left;">
+						<i class="fas fa-phone-square"></i>
+            <label>Telèfon:</label>
+            <!--<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/>-->
+            <input type="text" name="phone" value="" required="required"/>
+          </p>
+          <p class="camp">
+						<i class="fas fa-at"></i>
+            <label>Email:</label>
+            <!--<input type="email" name="email" value=""/>-->
+            <input type="text" name="email" value="" required="required"/>
+          </p>
+          <p class="camp">
+						<i class="fas fa-file-invoice-dollar"></i>
+            <label>Compte corrent:</label>
+            <input type="text" name="account" value="" required="required" placeholder="Compte obligatori"/>
+          </p>
+          <p>
+						<i class="fas fa-table-tennis"></i>
+            <label>Tipus jugador:</label>
+            <select id ="category" name="category">
+              <option value="BEG">Beginner</option>
+              <option value="PRO" selected>Professional</option>
+            </select>
+          </p>
+
+          <div style="clear:both;text-align:right">
+            <input type="button" id="btn-enviar" class="button-form"  name="enviar" value="Afegir jugador"/>
+          </div>
+
+        </form>
+      </fieldset>
+
+      <h2><i class="fas fa-list-ul"></i> <span class="title">Llista de jugadors</span></h2>
+			<div class="title-list">
+				<h3>Jugadors principiants</h3>
+			</div>
+			<div class="title-list">
+					<h3 style="padding-left:25px">Jugadors professionals</h3>
+			</div>
+      <div id="c_beginner_list"></div>
+      <div id="c_professional_list"></div>
+			<div style="clear:both"></div>
+    </main>
+
+    <footer>&copy;YoungPro Team - 2019</footer>
+
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/validation.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+  </body>
+</html>
